@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Products | Bazaarly</title>
+<meta name="description" content="Bazaarly — multi-vendor online marketplace demo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/store.css">
+</head>
+<body data-page="listing">
+<div class="topbar"><div class="wrap">
+  <span class="lead hide-sm">Free delivery on orders over ৳1,500 from the same seller</span>
+  <a href="sell.html">Sell on Bazaarly</a>
+  <a href="admin/index.html">Admin panel</a>
+  <a href="#" class="hide-sm">Help &amp; support</a>
+  <a href="account.html">Login / Sign up</a>
+</div></div>
+<header class="header"><div class="wrap">
+  <a class="logo" href="index.html" aria-label="Bazaarly home"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#fff"/><path d="M11 15h18l-2 15a3 3 0 0 1-3 2.6h-8A3 3 0 0 1 13 30z" fill="#5B3CC4"/><path d="M15 15v-2a5 5 0 0 1 10 0v2" fill="none" stroke="#5B3CC4" stroke-width="2.6"/><circle cx="20" cy="23" r="3" fill="#FF9F1C"/></svg>Bazaarly</a>
+  <form class="search" role="search">
+    <select aria-label="Category"><option value="">All categories</option></select>
+    <input type="search" placeholder="Search in Bazaarly" aria-label="Search products" autocomplete="off">
+    <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Search</span></button>
+    <ul class="suggest" hidden></ul>
+  </form>
+  <nav class="h-actions" aria-label="Account">
+    <a href="account.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg><span class="lbl">Account</span></a>
+    <a href="cart.html" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg><span class="badge cart-badge" hidden>0</span><span class="lbl">Cart</span></a>
+  </nav>
+</div></header>
+<nav class="catnav" aria-label="Categories"><div class="wrap"></div></nav>
+<main class="wrap">
+
+<p class="crumbs"><a href="index.html">Home</a> / <span class="here"></span></p>
+<div class="listing">
+  <aside class="filters" aria-label="Filters">
+    <div style="display:flex;justify-content:space-between;align-items:center"><h3>Category</h3><button type="button" class="close-filters btn-o" style="padding:.2rem .6rem" aria-label="Close filters">✕</button></div>
+    <div id="f-cats"></div>
+    <h3>Price (৳)</h3>
+    <div class="price-row"><input id="f-min" inputmode="numeric" placeholder="Min" aria-label="Minimum price"><span>–</span><input id="f-max" inputmode="numeric" placeholder="Max" aria-label="Maximum price"></div>
+    <h3>Rating</h3>
+    <div id="f-rating">
+      <label><input type="radio" name="rating" value="0" checked> Any</label>
+      <label><input type="radio" name="rating" value="4.5"> <span class="stars">★★★★★</span> 4.5 &amp; up</label>
+      <label><input type="radio" name="rating" value="4"> <span class="stars">★★★★☆</span> 4 &amp; up</label>
+    </div>
+    <h3>Brand</h3><div id="f-brands"></div>
+    <h3>Service</h3>
+    <label><input type="checkbox" id="f-free"> Free delivery</label>
+    <label><input type="checkbox" id="f-mall"> Bazaarly Mall only</label>
+  </aside>
+  <section>
+    <div class="toolbar">
+      <button class="btn-o filter-btn" type="button">☰ Filters</button>
+      <h1></h1><span class="count"></span>
+      <select id="sort" aria-label="Sort by">
+        <option value="best">Best match</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option>
+        <option value="rating">Top rated</option><option value="new">Newest</option>
+      </select>
+    </div>
+    <div id="results"></div>
+  </section>
+</div>
+
+</main>
+<footer class="footer"><div class="wrap">
+  <div class="cols">
+    <div><h4>Customer care</h4><ul><li><a href="#">Help center</a></li><li><a href="#">How to buy</a></li><li><a href="#">Returns &amp; refunds</a></li><li><a href="account.html">Track my order</a></li></ul></div>
+    <div><h4>Bazaarly</h4><ul><li><a href="#">About us</a></li><li><a href="sell.html">Sell on Bazaarly</a></li><li><a href="#">Careers</a></li><li><a href="#">Terms &amp; conditions</a></li></ul></div>
+    <div><h4>Payment methods</h4><div class="pay-row"><span>bKash</span><span>Nagad</span><span>Rocket</span><span>VISA</span><span>Mastercard</span><span>COD</span></div></div>
+    <div><h4>Get in touch</h4><ul><li>Hotline: 09610-000000</li><li>support@bazaarly.example</li><li>Gulshan, Dhaka</li></ul></div>
+  </div>
+  <div class="copy"><span>© 2026 Bazaarly. Demo marketplace — all products, sellers and prices are fictional.</span><span>Frontend demo</span></div>
+</div></footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+</body>
+</html>
